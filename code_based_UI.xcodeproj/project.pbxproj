@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		347EA8741F72CB6F003A0504 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347EA8731F72CB6F003A0504 /* AppDelegate.swift */; };
 		347EA8761F72CB6F003A0504 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347EA8751F72CB6F003A0504 /* ViewController.swift */; };
-		347EA8791F72CB6F003A0504 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347EA8771F72CB6F003A0504 /* Main.storyboard */; };
 		347EA87B1F72CB6F003A0504 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 347EA87A1F72CB6F003A0504 /* Assets.xcassets */; };
 		347EA87E1F72CB6F003A0504 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347EA87C1F72CB6F003A0504 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -18,7 +17,6 @@
 		347EA8701F72CB6F003A0504 /* code_based_UI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = code_based_UI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		347EA8731F72CB6F003A0504 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		347EA8751F72CB6F003A0504 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		347EA8781F72CB6F003A0504 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		347EA87A1F72CB6F003A0504 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		347EA87D1F72CB6F003A0504 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		347EA87F1F72CB6F003A0504 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,7 +54,6 @@
 			children = (
 				347EA8731F72CB6F003A0504 /* AppDelegate.swift */,
 				347EA8751F72CB6F003A0504 /* ViewController.swift */,
-				347EA8771F72CB6F003A0504 /* Main.storyboard */,
 				347EA87A1F72CB6F003A0504 /* Assets.xcassets */,
 				347EA87C1F72CB6F003A0504 /* LaunchScreen.storyboard */,
 				347EA87F1F72CB6F003A0504 /* Info.plist */,
@@ -126,7 +123,6 @@
 			files = (
 				347EA87E1F72CB6F003A0504 /* LaunchScreen.storyboard in Resources */,
 				347EA87B1F72CB6F003A0504 /* Assets.xcassets in Resources */,
-				347EA8791F72CB6F003A0504 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,14 +141,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		347EA8771F72CB6F003A0504 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				347EA8781F72CB6F003A0504 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		347EA87C1F72CB6F003A0504 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -266,9 +254,10 @@
 				DEVELOPMENT_TEAM = 2D648X327H;
 				INFOPLIST_FILE = code_based_UI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.michael.code.based.UI.code-based-UI";
+				PRODUCT_BUNDLE_IDENTIFIER = com.michael.code.based.UI.code.based.UI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -279,9 +268,10 @@
 				DEVELOPMENT_TEAM = 2D648X327H;
 				INFOPLIST_FILE = code_based_UI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.michael.code.based.UI.code-based-UI";
+				PRODUCT_BUNDLE_IDENTIFIER = com.michael.code.based.UI.code.based.UI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -304,6 +294,7 @@
 				347EA8841F72CB6F003A0504 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -15,6 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        // First delete the default generated storyboard and the text "main" under Deployment Info/Deployment Target
+        // Create a new window for the window property that comes standard on the AppDelegate class. The UIWindow is where all view controllers and views appear.
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        // Set the initial View Controller to out instance of ViewController "customViewController" found in ViewController.swift
+        window?.rootViewController = UINavigationController(rootViewController: customViewController())
+        
+        // Make the window visible
+        window?.makeKeyAndVisible()
         // Override point for customization after application launch.
         return true
     }
