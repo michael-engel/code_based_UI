@@ -20,8 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Create a new window for the window property that comes standard on the AppDelegate class. The UIWindow is where all view controllers and views appear.
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        // Set the initial View Controller to out instance of ViewController "customViewController" found in ViewController.swift
-        window?.rootViewController = UINavigationController(rootViewController: customViewController())
+        let nav = UINavigationController(rootViewController: MainViewController())
+        nav.navigationBar.isTranslucent = false
+        
+        // Set the initial View Controller to out instance of ViewController "MainViewController" found in ViewController.swift
+        window?.rootViewController = nav
         
         // Make the window visible
         window?.makeKeyAndVisible()
