@@ -11,7 +11,9 @@
 		347EA8761F72CB6F003A0504 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347EA8751F72CB6F003A0504 /* MainViewController.swift */; };
 		347EA87B1F72CB6F003A0504 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 347EA87A1F72CB6F003A0504 /* Assets.xcassets */; };
 		347EA87E1F72CB6F003A0504 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347EA87C1F72CB6F003A0504 /* LaunchScreen.storyboard */; };
-		34D7CA4E1F73B0430088750F /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D7CA4D1F73B0430088750F /* TestViewController.swift */; };
+		34B6A43A1F767E1100A738CC /* StackViewTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B6A4391F767E1100A738CC /* StackViewTestViewController.swift */; };
+		34B6A43C1F767E8D00A738CC /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B6A43B1F767E8D00A738CC /* TestViewController.swift */; };
+		34D7CA4E1F73B0430088750F /* ButtonWoAutoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D7CA4D1F73B0430088750F /* ButtonWoAutoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,7 +23,9 @@
 		347EA87A1F72CB6F003A0504 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		347EA87D1F72CB6F003A0504 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		347EA87F1F72CB6F003A0504 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		34D7CA4D1F73B0430088750F /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		34B6A4391F767E1100A738CC /* StackViewTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackViewTestViewController.swift; sourceTree = "<group>"; };
+		34B6A43B1F767E8D00A738CC /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		34D7CA4D1F73B0430088750F /* ButtonWoAutoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonWoAutoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +59,10 @@
 			isa = PBXGroup;
 			children = (
 				347EA8731F72CB6F003A0504 /* AppDelegate.swift */,
+				34B6A43B1F767E8D00A738CC /* TestViewController.swift */,
 				347EA8751F72CB6F003A0504 /* MainViewController.swift */,
-				34D7CA4D1F73B0430088750F /* TestViewController.swift */,
+				34D7CA4D1F73B0430088750F /* ButtonWoAutoViewController.swift */,
+				34B6A4391F767E1100A738CC /* StackViewTestViewController.swift */,
 				347EA87A1F72CB6F003A0504 /* Assets.xcassets */,
 				347EA87C1F72CB6F003A0504 /* LaunchScreen.storyboard */,
 				347EA87F1F72CB6F003A0504 /* Info.plist */,
@@ -136,8 +142,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34B6A43C1F767E8D00A738CC /* TestViewController.swift in Sources */,
+				34B6A43A1F767E1100A738CC /* StackViewTestViewController.swift in Sources */,
 				347EA8761F72CB6F003A0504 /* MainViewController.swift in Sources */,
-				34D7CA4E1F73B0430088750F /* TestViewController.swift in Sources */,
+				34D7CA4E1F73B0430088750F /* ButtonWoAutoViewController.swift in Sources */,
 				347EA8741F72CB6F003A0504 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,7 +269,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.michael.code.based.UI.code.based.UI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -275,7 +283,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.michael.code.based.UI.code.based.UI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

@@ -6,10 +6,10 @@
 //  Copyright © 2017 Michael Engel. All rights reserved.
 //
 
+
 import UIKit
 
 class MainViewController: UIViewController {
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,18 +23,21 @@ class MainViewController: UIViewController {
         view.addSubview(button2)
         view.addSubview(button3)
         view.addSubview(text1)
-        // Update auto layout constraints
+        
+        // Calls that the view controller's view needs to update its constraints
         view.setNeedsUpdateConstraints()
     }
     
     // Mark: - Constraints
     
+    // Overriding func called when the view controller's view needs to update its constraints.
     override func updateViewConstraints() {
         
         button1Constraints()
         button2Constraints()
         button3Constraints()
         text1Constraints()
+        // Keep functionality of the overridden func
         super.updateViewConstraints()
     }
     
@@ -207,6 +210,48 @@ class MainViewController: UIViewController {
             .isActive = true
     }
     
+    func button3TopConstraints() {
+        NSLayoutConstraint(
+            item: button3Top,
+            attribute: .left,
+            relatedBy: .equal,
+            toItem: view,
+            attribute: .leftMargin,
+            multiplier: 1.0,
+            constant: 0.0)
+            .isActive = true
+        
+        NSLayoutConstraint(
+            item: button3Top,
+            attribute: .right,
+            relatedBy: .equal,
+            toItem: view,
+            attribute: .rightMargin,
+            multiplier: 1.0,
+            constant: 0.0)
+            .isActive = true
+        
+        NSLayoutConstraint(
+            item: button3Top,
+            attribute: .top,
+            relatedBy: .equal,
+            toItem: text1,
+            attribute: .bottom,
+            multiplier: 1.0,
+            constant: 20.0)
+            .isActive = true
+        
+        NSLayoutConstraint(
+            item: button3Top,
+            attribute: .height,
+            relatedBy: .equal,
+            toItem: nil,
+            attribute: .notAnAttribute,
+            multiplier: 10.0,
+            constant: 50.0)
+            .isActive = true
+    }
+    
 
     
     override func didReceiveMemoryWarning() {
@@ -214,9 +259,10 @@ class MainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+  
+    
     lazy var button1: UIButton = {
         let tempButton = UIButton(type: UIButtonType.system)
-        tempButton.backgroundColor = UIColor.green
         tempButton.translatesAutoresizingMaskIntoConstraints = false
         tempButton.setTitle("Print text", for: .normal)
         tempButton.backgroundColor = UIColor.black
@@ -231,7 +277,6 @@ class MainViewController: UIViewController {
     
     lazy var button2: UIButton = {
         let tempButton = UIButton(type: UIButtonType.system)
-        tempButton.backgroundColor = UIColor.green
         tempButton.translatesAutoresizingMaskIntoConstraints = false
         tempButton.setTitle("Set default text", for: .normal)
         tempButton.backgroundColor = UIColor.black
@@ -246,7 +291,20 @@ class MainViewController: UIViewController {
     
     lazy var button3: UIButton = {
         let tempButton = UIButton(type: UIButtonType.system)
-        tempButton.backgroundColor = UIColor.green
+        tempButton.translatesAutoresizingMaskIntoConstraints = false
+        tempButton.setTitle("Add button", for: .normal)
+        tempButton.backgroundColor = UIColor.gray
+        tempButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20) // e.g. for italic type italicSystemFont
+        tempButton.layer.cornerRadius = 10
+        tempButton.setTitleColor(UIColor.white, for: .normal)
+        // Specify event and following handler func
+        tempButton.addTarget(self, action:#selector(button3_handler), for: UIControlEvents.touchUpInside)
+        // Make the button visible
+        return tempButton
+    }()
+    
+    lazy var button3Top: UIButton = {
+        let tempButton = UIButton(type: UIButtonType.system)
         tempButton.translatesAutoresizingMaskIntoConstraints = false
         tempButton.setTitle("Open test view", for: .normal)
         tempButton.backgroundColor = UIColor.black
@@ -254,7 +312,7 @@ class MainViewController: UIViewController {
         tempButton.layer.cornerRadius = 10
         tempButton.setTitleColor(UIColor.white, for: .normal)
         // Specify event and following handler func
-        tempButton.addTarget(self, action:#selector(button3_handler), for: UIControlEvents.touchUpInside)
+        tempButton.addTarget(self, action:#selector(button3Top_handler), for: UIControlEvents.touchUpInside)
         // Make the button visible
         return tempButton
     }()
@@ -271,20 +329,29 @@ class MainViewController: UIViewController {
         tempText.textColor = UIColor.black
         return tempText
     }()
-    
+
     //Button1 handler
     func button1_handler(sender: UIButton) {
-        print(text1.text!)
+        print(text1.text)
     }
-    
+ 
     //Button2 handler
     func button2_handler(sender: UIButton) {
         text1.text = "Hello world!"
+        view.addSubview(button3)
+        button3Constraints()
     }
     
     //Button3 handler
     func button3_handler(sender: UIButton) {
-        let vc = TestViewController()
+        view.addSubview(button3Top)
+        button3TopConstraints()
+    }
+    
+    //Button3Top handler
+    func button3Top_handler(sender: UIButton) {
+        let vc = ButtonWoAutoViewController()
+        vc.modalPresentationStyle = .overCurrentContext
         self.present(vc, animated: true, completion: nil)
     }
 }
